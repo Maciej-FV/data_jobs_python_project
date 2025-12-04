@@ -78,11 +78,11 @@ Each time, I have started by loading in the dataset and importing necessary libr
 To narrow down the analysis, I focused on the USA and their job postings because the count of job postings in USA is the highest one. 
 
 
-    df_US = df[df['job_country'] == 'United States]
+    df_US = df[df['job_country'] == 'United States']
 
 **Filtering for Data Analyst Job Postings**
 
-    df_US = df[df['job_title_short'] == 'Data Analyst]
+    df_US = df[df['job_title_short'] == 'Data Analyst']
 
 ## **The Analysis**
 Each Jupyter Notebook in this course project aims at learning new Python concept or investigating particular aspects of the Data job market.
