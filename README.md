@@ -99,16 +99,16 @@ The notebook with the query [here](/3_Python_Project/2_Skills_Count.ipynb)
 
     sns.set_theme(style='ticks')
 
-     i, job_title in enumerate(job_titles):
-    df_plot = df_skills_perc[df_skills_perc['job_title_short'] == job_title].head(5)
-    sns.barplot(data=df_plot, x='skill_percent', y='job_skills', ax=ax[i], hue='skill_count', palette='dark:salmon_r')
-    ax[i].set_title(job_title)
-    ax[i].set_ylabel('')
-    ax[0].set_xlabel('')
-    ax[1].set_xlabel('')
-    ax[2].set_xlabel('Likelihood Percentage')
-    ax[i].legend().set_visible(False)
-    ax[i].set_xlim(0, 100)
+    for i, job_title in enumerate(job_titles):
+        df_plot = df_skills_perc[df_skills_perc['job_title_short'] == job_title].head(5)
+        sns.barplot(data=df_plot, x='skill_percent', y='job_skills', ax=ax[i], hue='skill_count', palette='dark:salmon_r')
+        ax[i].set_title(job_title)
+        ax[i].set_ylabel('')
+        ax[0].set_xlabel('')
+        ax[1].set_xlabel('')
+        ax[2].set_xlabel('Likelihood Percentage')
+        ax[i].legend().set_visible(False)
+        ax[i].set_xlim(0, 100)
 
     for n, v in enumerate(df_plot['skill_percent']):
         ax[i].text(v + 1, n, f'{v:.0f}%', va='center')
