@@ -49,13 +49,13 @@ To create this project, I have learned how to use following tools:
 4. **Git & GitHub**: Allows version control as well as sharing the Python code that stands behind this entire analytical project. 
 
 ## **Data Preparation and Clean-up**
----
+
 This section explains the steps taken for the analysis of the data.
 
 **Importing & Cleaning-up Data**
-Each time, I have started by loading in the dataset and importing necessary libraries used for the analysis of the data.
 
-'code' 
+Each time, I have started by loading in the dataset and importing necessary libraries used for the analysis of the data.
+ 
     
     #importing libraries
     import ast
@@ -87,6 +87,54 @@ To narrow down the analysis, I focused on the USA and their job postings because
 ## **The Analysis**
 Each Jupyter Notebook in this course project aims at learning new Python concept or investigating particular aspects of the Data job market.
 
+**1. What are the most in-demand skills for the top 3 most popular role in Data Science?**
+
+To find the most in-demand skills for the top 3 most popular Data positions on the job market, I first looked for the Top 3 of the 8 job titles in 'job_title_short' by the amount of job postings, and I got the top 5 skills that are often required for becoming one of those Top 3 positions. 
+
+The notebook with the query [here](/3_Python_Project/2_Skills_Count.ipynb)
+
+**Data Visualization**
+
+    fig, ax = plt.subplots(len(job_titles), 1)
+
+    sns.set_theme(style='ticks')
+
+     i, job_title in enumerate(job_titles):
+    df_plot = df_skills_perc[df_skills_perc['job_title_short'] == job_title].head(5)
+    sns.barplot(data=df_plot, x='skill_percent', y='job_skills', ax=ax[i], hue='skill_count', palette='dark:salmon_r')
+    ax[i].set_title(job_title)
+    ax[i].set_ylabel('')
+    ax[0].set_xlabel('')
+    ax[1].set_xlabel('')
+    ax[2].set_xlabel('Likelihood Percentage')
+    ax[i].legend().set_visible(False)
+    ax[i].set_xlim(0, 100)
+
+    for n, v in enumerate(df_plot['skill_percent']):
+        ax[i].text(v + 1, n, f'{v:.0f}%', va='center')
+
+    if i != len(job_titles) - 1:
+        ax[i].set_xticks([])
+
+    fig.suptitle('Likelihood of Skills Requested in US Job Postings', fontsize= 15)
+    fig.tight_layout(h_pad=0.5)
+
+**Results**
+
+![Visualization of Top Skills Likelihood](/3_Python_Project/images/likelihood_of_skills.png)
+
+
+**Insights:**
+- SQL is the most desired skill for both Data Analyst (51%) and Data Engineer (68%) being present in more than half of the job postings for those roles. In case of Data Scientists, the most in-demand skill is Python with 72% of presence in job postings.
+- Python is a versatile skill, often present in the job postings for all top 3 Data position on the job market. (Data Analyst - 27%, Data Engineer - 65%, Data Scientist - 72%)
+
+**2. What are the trends of in-demand skills for Data Analysts?**
+
+In order to find the trending skills for Data Analysts in 2023, Data Analyst postings have been filtered and grouped by skills according to the month of the job postings. This allowed to find the Top 5 skills of Data Analysts sorting by month, showing the skills trends in 2023. 
+
+The detailed query is [here](/3_Python_Project/3_Skills_Trend.ipynb)
+
+**Data Visualization**
 
 
 
