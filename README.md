@@ -167,7 +167,110 @@ The detailed query is [here](/3_Python_Project/3_Skills_Trend.ipynb)
 - Python's demand in Data Analytics is stable. More job offers with Python in demand appear in the period of time between October and December. 
 
 
+## 3. How well do jobs and skills pay for Data Roles?
 
+Entire query is [here](/3_Python_Project/4_Salary_Analysis.ipynb)
+
+### Salary Analysis
+
+#### Visualization of the Data
+
+    sns.boxplot(data=df_US_top6, x='salary_year_avg', y='job_title_short', order=job_order)
+    sns.set_theme(style='ticks')
+
+    plt.title('Salary Distribution in the United States')
+    plt.xlabel('Yearly Salary ($USD)')
+    plt.ylabel('')
+    ax = plt.gca()
+    ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda x, pos: f'${int(x/1000)}K'))
+    plt.xlim(0,600000)
+    
+#### Results 
+
+![Distribution of the Salary by the top 6 Data Roles](/3_Python_Project/images/salary_distribution_by_top6.png) *Salary Distribution of the Salary by the Top 6 Data Roles*
+
+#### Insights
+- The median salaries improve when achieving the Senior equivalents of the respective roles. However, both Data Analysts and Senior Data Analyst remain at the bottom of the graph with salaries lower than the rest of the Top 6 (Data Engineer, Senior Data Engineer, Data Scientist, Senior Data Scientist).
+- Data Scientist has a high variety of outliers with some of them reaching over $500 thousand dollars (but those are quite rare and can be treated as exceptions, especially when such outliers do not appear in the case of its Senior equivalent, which in the terms of median salary earns more than it's non-Senior role.) Those outliers might suggest the high value in experience and advanced data skills.  
+
+
+### Highest Paid and Most Demanded Skills for Data Analysts
+
+#### Visualization of the Data
+
+    
+
+    fig, ax = plt.subplots(2,1)
+
+
+    sns.barplot(data=df_DA_top_pay, x='median', y=df_DA_top_pay.index, ax=ax[0], legend=False, hue='median', palette ='dark:salmon_r')
+    ax[0].set_title('Top 10 Paid Skills for Data Analyst')
+    ax[0].set_ylabel('')
+    ax[0].set_xlabel('')
+    ax[0].xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'${int(x/1000)}K'))
+
+
+    sns.barplot(data=df_DA_skills, x='median', y=df_DA_skills.index, ax=ax[1], legend=False, hue='median', palette = 'dark:salmon_r')
+    ax[1].set_xlim(ax[0].get_xlim())
+    ax[1].set_title('Top 10 Most Popular Data Analyst Skills')
+    ax[1].set_ylabel('')
+    ax[1].set_xlabel('Median Salary ($USD)')
+    ax[1].xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'${int(x/1000)}K'))
+
+    sns.set_theme(style = 'ticks')
+    fig.tight_layout()
+
+#### Results
+
+![Top Paid, Demanded and Popular Skills for Data Analyst](/3_Python_Project/images/top_paid_&_popular_skills.png)*Two bar graphs visualizing the highest paid skills and most demanded skill for US Data Analyst.*
+
+#### Insights
+- The top graph shows that highly specialized skills such as 'dplyr', 'Bitbucket', and 'Gitlab' are paid higher salaries showing that advancing with more technical skills can increase the salary. 
+- The bottom graph shows the most popular and in-demand skills that often are the foundation for Data Analyst such as: 'SQL', 'Excel', 'Python', 'Tableau'. They may not offer the highest salaries but they show that foundations are necessary for an employment in Data Analytics.
+- There is a clear difference between the most popular and top paid skills in terms of salary. If one wants to improve their salary, one should learn how to use specialized skills for certain niches. 
+
+## 4. What is the most optimal skill to learn for Data Analysts?
+
+Entire query is [here](/3_Python_Project/5_Optimal_Skills.ipynb)
+
+#### Visualize Data
+
+    sns.scatterplot(
+    data= df_plot,
+    x='skill_percent',
+    y='median_salary',
+    hue='technology'
+    )
+
+    sns.despine()
+    sns.set_theme(style='ticks')
+
+    texts=[]
+    for i, txt in enumerate(df_DA_skills_high_demand.index):
+        texts.append(plt.text(df_DA_skills_high_demand['skill_percent'].iloc[i], df_DA_skills_high_demand['median_salary'].iloc[i], txt))
+
+
+    adjust_text(texts, arrowprops=dict(arrowstyle='->', color='gray'))
+
+
+    plt.xlabel('Percentage of Data Analysts Job Postings')
+    plt.ylabel('Median Yearly Salary')
+    plt.title('Most Optimal Skills for Data Analyst in the US')
+
+    ax = plt.gca()
+    ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda y, pos: f'${int(y/1000)}K'))
+    ax.xaxis.set_major_formatter(PercentFormatter(decimals=0))
+
+
+    plt.tight_layout()
+    plt.show()
+
+![Most Optimal Skills for Data Analysts in the US](/3_Python_Project/images/most_optimal_skills_DA.png)*A scatter plot visualizing the most optimal skills for Data Analysts (as in high pay and high demand).*
+
+#### Insights
+- The scatter plot shows that the majority of the 'programming' skills (that are colored blue) tend to have a higher salary levels compared to other Data Analysts skills, which suggests that getting to know certain programming languages may positively affect one's salary.
+- Analyst tools that are colored green, including PowerBi or Tableau are often present in the job postings  showing that visualization is an important aspect of Data Analytics. Not only those two skills provide a good salary but also versatile opportunities. 
+- The database skills that are orange on the graph, such as, Oracle or SQL Server provide some of the highest Data Analyst salaries. This shows a significant demand for management and manipulation of data in the industry.
 
 
 
