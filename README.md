@@ -187,7 +187,8 @@ Entire query is [here](/3_Python_Project/4_Salary_Analysis.ipynb)
     
 #### Results 
 
-![Distribution of the Salary by the top 6 Data Roles](/3_Python_Project/images/salary_distribution_by_top6.png) *Salary Distribution of the Salary by the Top 6 Data Roles*
+![Distribution of the Salary by the top 6 Data Roles](/3_Python_Project/images/salary_distribution_by_top6.png) 
+*Salary Distribution of the Salary by the Top 6 Data Roles*
 
 #### Insights
 - The median salaries improve when achieving the Senior equivalents of the respective roles. However, both Data Analysts and Senior Data Analyst remain at the bottom of the graph with salaries lower than the rest of the Top 6 (Data Engineer, Senior Data Engineer, Data Scientist, Senior Data Scientist).
@@ -222,7 +223,8 @@ Entire query is [here](/3_Python_Project/4_Salary_Analysis.ipynb)
 
 #### Results
 
-![Top Paid, Demanded and Popular Skills for Data Analyst](/3_Python_Project/images/top_paid_&_popular_skills.png)*Two bar graphs visualizing the highest paid skills and most demanded skill for US Data Analyst.*
+![Top Paid, Demanded and Popular Skills for Data Analyst](/3_Python_Project/images/top_paid_&_popular_skills.png)
+*Two bar graphs visualizing the highest paid skills and most demanded skill for US Data Analyst.*
 
 #### Insights
 - The top graph shows that highly specialized skills such as 'dplyr', 'Bitbucket', and 'Gitlab' are paid higher salaries showing that advancing with more technical skills can increase the salary. 
@@ -265,7 +267,8 @@ Entire query is [here](/3_Python_Project/5_Optimal_Skills.ipynb)
     plt.tight_layout()
     plt.show()
 
-![Most Optimal Skills for Data Analysts in the US](/3_Python_Project/images/most_optimal_skills_DA.png)*A scatter plot visualizing the most optimal skills for Data Analysts (as in high pay and high demand).*
+![Most Optimal Skills for Data Analysts in the US](/3_Python_Project/images/most_optimal_skills_DA.png)
+*A scatter plot visualizing the most optimal skills for Data Analysts (as in high pay and high demand).*
 
 #### Insights
 - The scatter plot shows that the majority of the 'programming' skills (that are colored blue) tend to have a higher salary levels compared to other Data Analysts skills, which suggests that getting to know certain programming languages may positively affect one's salary.
