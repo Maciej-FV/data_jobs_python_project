@@ -123,6 +123,8 @@ The notebook with the query [here](/3_Python_Project/2_Skills_Count.ipynb)
 
 ![Visualization of Top Skills Likelihood](/3_Python_Project/images/likelihood_of_skills.png)
 
+*Likelihood of Skill being required in job postings in the US*
+
 
 **Insights:**
 - SQL is the most desired skill for both Data Analyst (51%) and Data Engineer (68%) being present in more than half of the job postings for those roles. In case of Data Scientists, the most in-demand skill is Python with 72% of presence in job postings.
@@ -158,6 +160,7 @@ The detailed query is [here](/3_Python_Project/3_Skills_Trend.ipynb)
 **Results**
 
 ![The Trends of In-Demand Skills for Data Analysts in the US](/3_Python_Project/images/trends_of_skills_for_DA.png)
+
 *Visualization of the trends of in-demand Data Analytic skills on the job market per month (in 2023)*
 
 **Insights**
@@ -188,6 +191,7 @@ Entire query is [here](/3_Python_Project/4_Salary_Analysis.ipynb)
 #### Results 
 
 ![Distribution of the Salary by the top 6 Data Roles](/3_Python_Project/images/salary_distribution_by_top6.png) 
+
 *Salary Distribution of the Salary by the Top 6 Data Roles*
 
 #### Insights
@@ -224,6 +228,7 @@ Entire query is [here](/3_Python_Project/4_Salary_Analysis.ipynb)
 #### Results
 
 ![Top Paid, Demanded and Popular Skills for Data Analyst](/3_Python_Project/images/top_paid_&_popular_skills.png)
+
 *Two bar graphs visualizing the highest paid skills and most demanded skill for US Data Analyst.*
 
 #### Insights
@@ -268,6 +273,7 @@ Entire query is [here](/3_Python_Project/5_Optimal_Skills.ipynb)
     plt.show()
 
 ![Most Optimal Skills for Data Analysts in the US](/3_Python_Project/images/most_optimal_skills_DA.png)
+
 *A scatter plot visualizing the most optimal skills for Data Analysts (as in high pay and high demand).*
 
 #### Insights
