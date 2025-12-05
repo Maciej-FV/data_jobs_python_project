@@ -282,4 +282,10 @@ Entire query is [here](/3_Python_Project/5_Optimal_Skills.ipynb)
 - The database skills that are orange on the graph, such as, Oracle or SQL Server provide some of the highest Data Analyst salaries. This shows a significant demand for management and manipulation of data in the industry.
 
 
+# Conclusion
 
+This entire project has been a great opportunity for me to further improve as a (wannabe) Data Analyst. 
+This project reveals informative aspects of Data job market, highlighting the necessary skills and trends that allow people to become a part of this interesting field. 
+Since the data provided for this course project contains mostly 2023 data, it might be necessary to recreate this project on the newer, available data from current year. However, this project still serves as a great tool allowing people to analyze and understand the job market for Data roles. 
+Thanks to this, they preparations to enter this field will be much easier as now they know what is worth focusing on and what is not. 
+Thanks once again for Luke Barousse and his awesome projects that are available on YouTube! 
