@@ -136,6 +136,36 @@ The detailed query is [here](/3_Python_Project/3_Skills_Trend.ipynb)
 
 **Data Visualization**
 
+    df_plot = df_DA_US_percentage.iloc[:, :5]
+
+    sns.lineplot(data=df_plot, dashes=False, palette='dark:salmon_r')
+    sns.set_theme(style='ticks')
+    sns.despine()
+
+    plt.title('The Trends for Top Skills of Data Analysts in the US')
+    plt.ylabel('Likelihood in Job Postings')
+    plt.xlabel('2023')
+    plt.legend().remove()
+
+    from matplotlib.ticker import PercentFormatter
+
+    ax = plt.gca()
+    ax.yaxis.set_major_formatter(PercentFormatter(decimals=0))
+
+    for i in range(5):
+        plt.text(11.2, df_plot.iloc[-1, i], df_plot.columns[i])
+
+**Results**
+
+![The Trends of In-Demand Skills for Data Analysts in the US](/3_Python_Project/images/trends_of_skills_for_DA.png)
+*Visualization of the trends of in-demand Data Analytic skills on the job market per month (in 2023)*
+
+**Insights**
+- SQL triumphs on the top of the list for the most in-demand skills for Data Analysts in 2023. However it shows a slight decrease in demand in job postings.
+- Excel's demand increased around June till August where the demand for this particular skill started dropping only to increase once again in November.
+- Visualization applications like Tableau and PowerBI remain stable with minor fluctuations throughout the year of 2023. PowerBI remains less demanded but it slowly gains popularity at the end of the year while Tableau's popularity slightly decreases at the same time.
+- Python's demand in Data Analytics is stable. More job offers with Python in demand appear in the period of time between October and December. 
+
 
 
 
