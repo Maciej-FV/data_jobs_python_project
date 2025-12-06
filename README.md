@@ -467,13 +467,13 @@ Query można znaleźć [tutaj](/3_Python_Project/3_Skills_Trend.ipynb)
 
 ![Trendy najbardziej pożądanych umiejętności na rynku pracy Analityków Danych w USA](/3_Python_Project/images/trends_of_skills_for_DA.png)
 
-*Trendy najbardziej pożądanych umiejętności na rynku pracy Analityków Danych w USA*
+*Trendy wśród umiejętności o najwyższym zapotrzebowaniu na rynku pracy Analityków Danych w USA*
 
 **Spostrzeżenia**
-- SQL króluje na wszelkimi innymi umiejętnościami pożądanymi przez pracodawców poszukujących pracowników z dziedziny danych w 2023 roku. Jednakże, SQL wykazuje delikatny spadek w ostatnim kwartale roku. 
-- Pożądanie umiejętności korzystania z Excela delikatnie wzrosło w okresie od czerwca do sierpnia, po to by chwilę późnie znaczącą spaść. Jednakżę, w  listopadzie Excel wrócił do łask i jego popularność zaczeła z powrotem wzrastać. 
+- SQL króluje na wszelkimi innymi umiejętnościami, na które panuję zapotrzebianie wśród pracodawców poszukujących pracowników z dziedziny danych w 2023 roku. Jednakże, SQL wykazuje delikatny spadek w ostatnim kwartale roku. 
+- Zapotrzebowaanie na umiejętności korzystania z Excela delikatnie wzrosło w okresie od czerwca do sierpnia, po to by chwilę późnie znaczącą spaść. Jednakżę, w  listopadzie Excel wrócił do łask i jego popularność zaczeła z powrotem wzrastać. 
 - Aplikacje skupiające się na wizualizacji danych takie jak Tableau i PowerBi utrzymują stosunkowo stały poziom prze cały 2023 rok. Co ciekawe, Tableau przez cały czas króluje nad PowerBi, ale pod koniec roku jego popularność delikatnie spadła, a za to popularność PowerBI równomiernie wzrosła. 
-- Pożądanie umiejętności obsługi języka Python w dziedzinie danych jest stabilne. Liczba ofert prac wspominających o Pythonie wzrasta pod koniec roku od listopada do grudnia. 
+- Zapotrzebowanie na umiejętności obsługi języka Python w dziedzinie danych jest stabilne. Liczba ofert prac wspominających o Pythonie wzrasta pod koniec roku od listopada do grudnia. 
 
 **3. Jak dobrze opłacane są poszczególne role i umiejętności w rolach zajmujących się danymi?**
 ---
@@ -496,7 +496,7 @@ Query można znaleźć [tutaj](/3_Python_Project/4_Salary_Analysis.ipynb)
 
 **Rezultaty**
 
-![Dystrybucja wynagrodzenia w USA](/3_Python_Project/4_Salary_Analysis.ipynb)
+![Dystrybucja wynagrodzenia w USA](/3_Python_Project/images/salary_distribution_by_top6.png)
 
 *Dystrybucja wynagrodzenia w dziedzinie danych w Stanach Zjednoczonych*
 
